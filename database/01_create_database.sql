@@ -17,11 +17,14 @@ CREATE TABLE movies (
     movie_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     release_year YEAR,
+    release_date DATE,
     duration_minutes INT,
     language VARCHAR(100),
     country VARCHAR(100),
     budget DECIMAL(15, 2),
     revenue DECIMAL(15, 2),
+    domestic_revenue DECIMAL(15, 2),
+    international_revenue DECIMAL(15, 2),
     imdb_rating DECIMAL(3, 1),
     vote_count INT
 );
@@ -81,3 +84,33 @@ CREATE TABLE movie_directors (
         REFERENCES directors(director_id)
         ON DELETE CASCADE
 );
+
+-- ============================================
+-- Table 6: Actors / Talent
+-- ============================================
+
+CREATE TABLE actors (
+    actor_id INT AUTO_INCREMENT PRIMARY KEY,
+    actor_name VARCHAR(255) NOT NULL
+);
+
+-- ============================================
+-- Table 7: Movie-Actor Relationship
+-- ============================================
+
+CREATE TABLE movie_actors (
+    movie_id INT,
+    actor_id INT,
+    role_type VARCHAR(100) DEFAULT 'Lead',
+
+    PRIMARY KEY (movie_id, actor_id),
+
+    FOREIGN KEY (movie_id)
+        REFERENCES movies(movie_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (actor_id)
+        REFERENCES actors(actor_id)
+        ON DELETE CASCADE
+);
+

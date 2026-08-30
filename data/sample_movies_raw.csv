@@ -1,0 +1,11 @@
+movie_id,title,release_date,duration_minutes,language,country,budget,revenue,domestic_revenue,international_revenue,imdb_rating,vote_count,genres,directors,actors
+1,Inception,2010-07-16,148,English,USA,"$160,000,000","$839,000,000",292576195,546423805,8.8,2600000,"Action, Science Fiction, Thriller",Christopher Nolan,Leonardo DiCaprio
+2,Interstellar,2014-11-07,169,English,USA,"$165,000,000","$731,000,000",188020017,542979983,8.7,2300000,"Drama, Science Fiction, Thriller",Christopher Nolan,Matthew McConaughey
+3,Avatar,2009-12-18,162,English,USA,"$237,000,000","$2,920,000,000",785221649,2134778351,7.9,1400000,"Action, Adventure, Science Fiction",James Cameron,Sam Worthington
+4,Titanic,1997-12-19,195,English,USA,"$200,000,000","$2,260,000,000",659363944,1600636056,7.9,1300000,"Drama, Romance",James Cameron,"Leonardo DiCaprio, Kate Winslet"
+5,Jurassic Park,1993-06-11,127,English,USA,"$63,000,000","$1,046,000,000",404214720,641785280,8.2,1100000,"Action, Adventure, Science Fiction",Steven Spielberg,Sam Neill
+6,The Lord of the Rings: The Return of the King,2003-12-17,201,English,New Zealand,"$94,000,000","$1,146,000,000",377845905,768154095,9.0,2000000,"Action, Adventure, Drama, Fantasy",Peter Jackson,Elijah Wood
+7,Pulp Fiction,1994-10-14,154,English,USA,"$8,000,000","$214,000,000",107928762,106071238,8.9,2300000,"Crime, Drama, Thriller",Quentin Tarantino,John Travolta
+8,Parasite,2019-05-30,132,Korean,South Korea,"$11,400,000","$262,000,000",53369749,208630251,8.5,1000000,"Crime, Drama, Thriller",Bong Joon-ho,Song Kang-ho
+9,Mad Max: Fury Road,2015-05-15,120,English,Australia,"$150,000,000","$380,000,000",154064072,225935928,8.1,1100000,"Action, Adventure, Science Fiction",George Miller,Tom Hardy
+10,Dune,2021-10-22,155,English,USA,"$165,000,000","$407,000,000",108327830,298672170,8.0,900000,"Adventure, Drama, Science Fiction",Denis Villeneuve,Timothée Chalamet

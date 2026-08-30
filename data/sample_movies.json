@@ -1,0 +1,36 @@
+[
+  {
+    "title": "The Dark Knight",
+    "release_year": 2008,
+    "release_date": "2008-07-18",
+    "duration_minutes": 152,
+    "language": "English",
+    "country": "USA",
+    "budget": "$185,000,000",
+    "revenue": "$1,006,000,000",
+    "domestic_revenue": 534858444,
+    "international_revenue": 471141556,
+    "imdb_rating": 9.0,
+    "vote_count": 2700000,
+    "genres": "Action, Crime, Drama",
+    "directors": "Christopher Nolan",
+    "actors": "Christian Bale, Heath Ledger"
+  },
+  {
+    "title": "Oppenheimer",
+    "release_year": 2023,
+    "release_date": "2023-07-21",
+    "duration_minutes": 180,
+    "language": "English",
+    "country": "USA",
+    "budget": "$100,000,000",
+    "revenue": "$957,000,000",
+    "domestic_revenue": 326100000,
+    "international_revenue": 630900000,
+    "imdb_rating": 8.9,
+    "vote_count": 700000,
+    "genres": "Biography, Drama, History",
+    "directors": "Christopher Nolan",
+    "actors": "Cillian Murphy, Emily Blunt"
+  }
+]
