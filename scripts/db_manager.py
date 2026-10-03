@@ -4,8 +4,8 @@
 CineScope SQL Movie Analytics - Database Manager Engine
 File: scripts/db_manager.py
 Description: Manages MySQL & fallback SQLite connections,
-             dynamic DB creation, upload history tracking,
-             relational table normalization, and analytics queries.
+              dynamic DB creation, upload history tracking,
+              relational table normalization, and analytics queries.
 =====================================================
 """
 
@@ -53,6 +53,7 @@ class DatabaseManager:
                 
                 engine = create_engine(self.db_uri)
                 with engine.connect() as conn:
+                    # FIXED: Wrapped query inside text() for SQLAlchemy 2.0 compatibility
                     conn.execute(text("SELECT 1"))
                 logger.info(f"[SUCCESS] Connected to MySQL database '{MYSQL_DB}' successfully.")
                 return engine
