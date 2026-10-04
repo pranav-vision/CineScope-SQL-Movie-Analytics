@@ -17,6 +17,7 @@ from typing import Dict, List, Optional
 from fastapi import FastAPI, File, UploadFile, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from sqlalchemy import text
 
 # Add root directory to sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -87,7 +88,8 @@ def health_check():
     """Database connectivity and engine health check endpoint."""
     try:
         with db.engine.connect() as conn:
-            conn.execute(db.engine.dialect.has_table and db.engine.dialect.has_table(conn, "dim_movies") and db.engine.dialect.has_table(conn, "dim_movies") or db.engine.dialect.has_table(conn, "dim_movies"))
+            # FIXED: Using proper SQLAlchemy text execution query for health check
+            conn.execute(text("SELECT 1"))
         
         engine_type = "MySQL (Enterprise Relational DB)" if db.is_mysql else "SQLite (Local Fallback DB)"
         return {
@@ -181,3 +183,4 @@ async def upload_dataset(file: UploadFile = File(...)):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api.main:app", host="0.0.0.0", port=8000, reload=True)
+    
